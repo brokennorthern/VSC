@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title><%=poll.pollName%></title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="row">
+            <div class="logo-row">
+              <img src="/assets/logo.png" alt="logo" class="logo">
+            </div>
+        </div>
+
+        <div id="headercontainer">
+            <% title = poll.question %>
+            <% len = title.split(" ").length%>
+
+            <div class="header1">
+                <%=title.split(" ").slice(0,len-2).join(" ");%>
+            </div>
+            <div class="header2">
+                <%=title.split(" ").splice(-2).join(" ");%>
+            </div>
+        </div>
+        <div class="buttoncontainer">
+            <button class="button"><%=poll.options[0].optionText%></button>
+            <button class="button"><%=poll.options[1].optionText%></button>
+            <button class="button"><%=poll.options[2].optionText%></button>
+            <button class="submitbutton">SUBMIT</button>
+        </div>
+    </div>
+</body>
+</html>
