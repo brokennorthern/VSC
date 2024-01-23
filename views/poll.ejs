@@ -17,19 +17,19 @@
         <div id="headercontainer">
             <% title = poll.question %>
             <% len = title.split(" ").length%>
-
             <div class="header1">
                 <%=title.split(" ").slice(0,len-2).join(" ");%>
+                <%poll.options.length%>
             </div>
             <div class="header2">
                 <%=title.split(" ").splice(-2).join(" ");%>
             </div>
         </div>
         <div class="buttoncontainer">
-            <button class="button"><%=poll.options[0].optionText%></button>
-            <button class="button"><%=poll.options[1].optionText%></button>
-            <button class="button"><%=poll.options[2].optionText%></button>
-            <button class="submitbutton">SUBMIT</button>
+            <% for(let i = 0; i < poll.options.length; i++){ %>
+                <button class = "button" id="button<%=i%>" onclick="button<%=i%>_click()"><%=poll.options[i].optionText%></button>
+            <%}%>
+            <button class="submitbutton" id="submitButton" onclick="submit_click()">SUBMIT</button>
         </div>
     </div>
 </body>
