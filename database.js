@@ -7,17 +7,17 @@ let polls = [
             {
                 "optionId": 1,
                 "optionText": "Manchester City",
-                "votes": 28
+                "votes": 128
             },
             {
                 "optionId": 2,
                 "optionText": "Arsenal",
-                "votes": 74
+                "votes": 422
             },
             {
                 "optionId": 3,
                 "optionText": "Liverpool",
-                "votes": 32
+                "votes": 532
             }
         ],
         "votes": 134

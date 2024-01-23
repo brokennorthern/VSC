@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Dizplai</title>
+    <title>Results</title>
 </head>
 <body>
     <div id="wrapper">
@@ -13,6 +13,57 @@
               <img src="/assets/logo.png" alt="logo" class="logo">
             </div>
         </div>
+
+        <div id ="headercontainer">
+            <div class="header1">
+                Here are the
+            </div>
+            <div class="header2">
+                Global Result
+            </div>
+        </div>
+
+        <div class="buttoncontainer">
+            <% var array = [];%>
+            <% var indexarray = []; %>
+            <% for(let i = 0; i < poll.options.length; i++){ %>
+                <% array.push(+poll.options[i].votes); %>
+                <% indexarray.push(i); }%>
+            <%  for (var i = 1; i < array.length; i++){ %>
+            <%      for (var j = 0; j < i; j++) {%>
+            <%          if (array[i] > array[j]) { %>
+            <%              var x = array[i]; %>
+            <%              var y = indexarray[i]; %>
+            <%              array[i] = array[j]; %>
+            <%              indexarray[i] = indexarray[j]; %>
+            <%              array[j] = x; %>
+            <%              indexarray[j] = y; %>
+            <%          } %>
+            <%      } %>
+            <%  } %>
+
+                
+
+
+            <% for(let i = 0; i < poll.options.length; i++){ %>
+                <div class = "pollBar">
+                    <%var percentage = Math.round((100 * array[i] )/ poll.votes);%>
+                    <%= console.log(array[i])%>
+                    <%= console.log(percentage)%>
+                    <%= console.log(poll.votes)%>
+
+
+                    <div class="pollBarFill" id="pollbar<%=i%>" style="width: <%=percentage%>%)%>"></div>
+                    <div class="pollBarPercentage" id="pollbar<%=i%>"  <%= Math.round(100 * array[i] / poll.votes)  %>"></div>
+                    <div class="pollBarName" id="pollbar<%=i%>"  ><%= poll.options[indexarray[i]].optionText %></div>
+                </div>
+
+                <style>.pollBar {height: <%=100*2/i%>px; }</style>
+            <%}%>
+        </div>
+
+
+
     </div>
 </body>
 </html>
