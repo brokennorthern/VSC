@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/style.css">
     <title><%=poll.pollName%></title>
 </head>
+<div id="hiddenform" style="display: none;"></div>
 <body>
     <div id="wrapper">
         <div class="row">
@@ -24,16 +25,20 @@
             <div class="header2">
                 <%=title.split(" ").splice(-2).join(" ");%>
             </div>
+            <div class="header3">
+                <div id="errormessage" class="hiding">
+                Please select an option before pressing submit
+                </div>
+            </div>
         </div>
         <div class="buttoncontainer">
             <% for(let i = 0; i < poll.options.length; i++){ %>
-                <button class = "button" id="button<%=i%>" onclick="button<%=i%>_click()"><%=poll.options[i].optionText%></button>
+                <button class = "button" id="button<%=i%>" onclick="highlightButton('button<%=i%>')"><%=poll.options[i].optionText%></button>
                 <style>.button {height: <%=100*2/i%>px; }</style>
             <%}%>
-            <button class="submitbutton" id="submitButton" onclick="submit_click()">SUBMIT</button>
+            <button class="submitbutton" id="submitButton" onclick="submitButton(<%=poll.pollId%>)">SUBMIT</button>
         </div>
     </div>
-    <script src="script.js"></script>
-        
+    <script src="/script.js"></script>
 </body>
 </html>

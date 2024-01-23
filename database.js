@@ -122,7 +122,7 @@ let polls = [
                 "votes": 3
             }
         ],
-        "totalvotes": 124
+        "votes": 124
     }
 
 ]
@@ -131,4 +131,15 @@ function getPoll(id){
     return polls.find((poll) => poll.pollId === id)
 }
 
-exports.getPoll = getPoll
+function votePoll(poll){
+    
+    const id = +poll.pollID
+    const vote = +poll.voteID
+
+    polls[id - 1].options[vote].votes++
+    polls[id - 1].votes++
+
+}
+
+exports.getPoll = getPoll;
+exports.votePoll = votePoll;

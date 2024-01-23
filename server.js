@@ -3,6 +3,7 @@ const app = express();
 const PORT = 3000
 const database = require("./database")
 
+app.use(express.urlencoded({extended: true}))
 app.set("view engine", "ejs")
 
 
@@ -13,6 +14,21 @@ app.get('/', (req, res) => {
 app.get("/index", (req, res) => {
     res.render("index.ejs", {
         polls,
+    });
+})
+
+app.post("/results/:resID", (req, res) => {
+    const data = req.body
+    database.votePoll(data)
+    const poll = database.getPoll(+data.pollID)
+
+    if(!poll){
+        res.status(404).render("404page.ejs")
+        return
+    }
+
+    res.render("results.ejs",{
+        poll,
     });
 })
 

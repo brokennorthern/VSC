@@ -39,6 +39,16 @@ body {
 .header2{
     font-weight:600;
     padding-bottom: 2%;
+
+}
+
+.errorheader{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.hiding{
+    display: none;
 }
 
 .buttoncontainer {
@@ -73,6 +83,11 @@ body {
 .button:active {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight{
+    border: 8px solid #8C8C8C;
+    border-color: #ddd;
 }
 
 .submitbutton{
