@@ -20,95 +20,95 @@ let polls = [
                 "votes": 532
             }
         ],
-        "votes": 134
+        "votes": 1082
     },
     {
         "pollId": 2,
-        "pollName": "Premier League Winner",
-        "question": "Who will win the Premier League?",
+        "pollName": "Frequency",
+        "question": "When did you last Watch Football?",
         "options": [
             {
                 "optionId": 1,
-                "optionText": "Manchester City",
-                "votes": 28
-            },
-            {
-                "optionId": 1,
-                "optionText": "Manchester City",
-                "votes": 28
+                "optionText": "<1 Month Ago",
+                "votes": 77
             },
             {
                 "optionId": 2,
-                "optionText": "Arsenal",
-                "votes": 74
+                "optionText": "1-3 Months Ago",
+                "votes": 33
             },
             {
                 "optionId": 3,
-                "optionText": "Liverpool",
-                "votes": 32
+                "optionText": "3-6 Months Ago",
+                "votes": 22
+            },
+            {
+                "optionId": 4,
+                "optionText": "More than 6 Months",
+                "votes": 11
             }
         ],
-        "votes": 134
+        "votes": 144
     },
     {
         "pollId": 3,
-        "pollName": "Premier League Winner",
-        "question": "Who will win the Premier League?",
+        "pollName": "Greatest of all Time",
+        "question": "Who is the Best Footballer?",
         "options": [
             {
                 "optionId": 1,
-                "optionText": "Manchester City",
-                "votes": 28
+                "optionText": "Pele",
+                "votes": 228
             },
             {
                 "optionId": 2,
-                "optionText": "Arsenal",
-                "votes": 74
+                "optionText": "Lionel Messi",
+                "votes": 744
             },
             {
                 "optionId": 3,
-                "optionText": "Liverpool",
-                "votes": 32
+                "optionText": "Cristiano Ronaldo",
+                "votes": 332
             },
             {
-                "optionId": 1,
-                "optionText": "Manchester City",
-                "votes": 28
+                "optionId": 4,
+                "optionText": "You",
+                "votes": 218
             },
             {
-                "optionId": 1,
-                "optionText": "Manchester City",
+                "optionId": 5,
+                "optionText": "David Beckham",
                 "votes": 28
             }
         ],
-        "votes": 134
+        "votes": 1578
     },
     {
         "pollId": 4,
-        "pollName": "Premier League Winner",
-        "question": "Who will win the Premier League?",
+        "pollName": "Location",
+        "question": "Where do you most Enjoy Football?",
         "options": [
             {
                 "optionId": 1,
-                "optionText": "Manchester City",
-                "votes": 28
+                "optionText": "Television",
+                "votes": 281
             },
             {
                 "optionId": 2,
-                "optionText": "Arsenal",
-                "votes": 74
+                "optionText": "Internet Streaming",
+                "votes": 741
             },
             {
                 "optionId": 3,
-                "optionText": "Liverpool",
-                "votes": 32
+                "optionText": "In Person",
+                "votes": 321
             }
         ],
-        "votes": 134
+        "votes": 1343
     },
     {
         "pollId": 5,
-        "pollName": "Love the Game?",
+        "pollName": "And Finally",
         "question": "Do you Love Football?",
         "options": [
             {

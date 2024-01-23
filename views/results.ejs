@@ -48,18 +48,14 @@
             <% for(let i = 0; i < poll.options.length; i++){ %>
                 <div class = "pollBar">
                     <%var percentage = Math.round((100 * array[i] )/ poll.votes);%>
-                    <%= console.log(array[i])%>
-                    <%= console.log(percentage)%>
-                    <%= console.log(poll.votes)%>
-
-
-                    <div class="pollBarFill" id="pollbar<%=i%>" style="width: <%=percentage%>%)%>"></div>
-                    <div class="pollBarPercentage" id="pollbar<%=i%>"  <%= Math.round(100 * array[i] / poll.votes)  %>"></div>
+                    <div class="pollBarFill" id="pollbar<%=i%>" style="width: <%= percentage %>%"></div>
+                    <div class="pollBarPercentage" id="pollbar<%=i%>"> <%= Math.round(100 * array[i] / poll.votes) %> %</div>
                     <div class="pollBarName" id="pollbar<%=i%>"  ><%= poll.options[indexarray[i]].optionText %></div>
                 </div>
 
                 <style>.pollBar {height: <%=100*2/i%>px; }</style>
             <%}%>
+            <a class ="initbutton" href="/poll/<%=poll.pollId +1 %>" + poll.>Next Poll!</a>
         </div>
 
 
