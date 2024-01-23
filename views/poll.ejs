@@ -28,9 +28,12 @@
         <div class="buttoncontainer">
             <% for(let i = 0; i < poll.options.length; i++){ %>
                 <button class = "button" id="button<%=i%>" onclick="button<%=i%>_click()"><%=poll.options[i].optionText%></button>
+                <style>.button {height: <%=100*2/i%>px; }</style>
             <%}%>
             <button class="submitbutton" id="submitButton" onclick="submit_click()">SUBMIT</button>
         </div>
     </div>
+    <script src="script.js"></script>
+        
 </body>
 </html>

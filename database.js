@@ -1,4 +1,4 @@
-const polls = [
+let polls = [
     {
         "pollId": 1,
         "pollName": "Premier League Winner",
@@ -6,36 +6,123 @@ const polls = [
         "options": [
             {
                 "optionId": 1,
-                "optionText": "Manchester City"
+                "optionText": "Manchester City",
+                "votes": 28
             },
             {
                 "optionId": 2,
-                "optionText": "Arsenal"
+                "optionText": "Arsenal",
+                "votes": 74
             },
             {
                 "optionId": 3,
-                "optionText": "Liverpool"
+                "optionText": "Liverpool",
+                "votes": 32
             }
-        ]
+        ],
+        "votes": 134
     },
     {
         "pollId": 2,
-        "pollName": "Premier League Winner2",
-        "question": "Who will win the Premier League2?",
+        "pollName": "Premier League Winner",
+        "question": "Who will win the Premier League?",
         "options": [
             {
                 "optionId": 1,
-                "optionText": "Manchester City2"
+                "optionText": "Manchester City",
+                "votes": 28
+            },
+            {
+                "optionId": 1,
+                "optionText": "Manchester City",
+                "votes": 28
             },
             {
                 "optionId": 2,
-                "optionText": "Arsenal2"
+                "optionText": "Arsenal",
+                "votes": 74
             },
             {
                 "optionId": 3,
-                "optionText": "Liverpool2"
+                "optionText": "Liverpool",
+                "votes": 32
             }
-        ]
+        ],
+        "votes": 134
+    },
+    {
+        "pollId": 3,
+        "pollName": "Premier League Winner",
+        "question": "Who will win the Premier League?",
+        "options": [
+            {
+                "optionId": 1,
+                "optionText": "Manchester City",
+                "votes": 28
+            },
+            {
+                "optionId": 2,
+                "optionText": "Arsenal",
+                "votes": 74
+            },
+            {
+                "optionId": 3,
+                "optionText": "Liverpool",
+                "votes": 32
+            },
+            {
+                "optionId": 1,
+                "optionText": "Manchester City",
+                "votes": 28
+            },
+            {
+                "optionId": 1,
+                "optionText": "Manchester City",
+                "votes": 28
+            }
+        ],
+        "votes": 134
+    },
+    {
+        "pollId": 4,
+        "pollName": "Premier League Winner",
+        "question": "Who will win the Premier League?",
+        "options": [
+            {
+                "optionId": 1,
+                "optionText": "Manchester City",
+                "votes": 28
+            },
+            {
+                "optionId": 2,
+                "optionText": "Arsenal",
+                "votes": 74
+            },
+            {
+                "optionId": 3,
+                "optionText": "Liverpool",
+                "votes": 32
+            }
+        ],
+        "votes": 134
+    },
+    {
+        "pollId": 5,
+        "pollName": "Love the Game?",
+        "question": "Do you Love Football?",
+        "options": [
+            {
+                "optionId": 1,
+                "optionText": "Yes",
+                "votes": 121
+            },
+            {
+                "optionId": 2,
+                "optionText": "No",
+                "votes": 3
+            }
+        ],
+        "totalvotes": 124
     }
 
 ]
